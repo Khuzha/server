@@ -1,0 +1,1 @@
+docker run --name node --rm -P u_s
