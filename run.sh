@@ -1,1 +1,1 @@
-docker run --name node --rm -P u_s
+docker run --name node --rm -p 8080:80 -d server
