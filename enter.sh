@@ -1,1 +1,1 @@
-docker exec -ti node sh
+docker exec -ti server sh

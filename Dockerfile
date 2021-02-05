@@ -9,6 +9,7 @@ RUN apt update && apt install -y nginx \
 			php libapache2-mod-php php-mysql
 
 COPY ./srcs/* /tmp/
+COPY ./srcs/localhost /etc/nginx/sites-available
 COPY hello.js ./
 
 EXPOSE 80 443
