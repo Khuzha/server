@@ -21,9 +21,10 @@ server {
     index                           index.php index.html;
 
     location / {
+		autoindex				on;
         try_files               $uri $uri/ =404;
     }
-	
+
 	location ~ \.php$ {
 		include snippets/fastcgi-php.conf;
 		fastcgi_pass unix:/run/php/php7.3-fpm.sock;
