@@ -10,7 +10,6 @@ RUN apt update && \
 
 COPY ./srcs/* /tmp/
 COPY ./srcs/localhost /etc/nginx/sites-available
-COPY hello.js ./
 
 EXPOSE 80 443
 
