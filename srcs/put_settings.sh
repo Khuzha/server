@@ -5,13 +5,14 @@ mv /var/www/html/phpMyAdmin-5.0.4-all-languages /var/www/html/phpmyadmin
 
 # Set SSL-certificate
 mkdir /var/ssl/
-openssl req -new -nodes -newkey rsa:2048 \
-	-out /var/ssl/localhost.crt \
-	-keyout /var/ssl/localhost.key \
+openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 365 \
+	-keyout localhost.key \
+	-out localhost.crt \
 	-subj "/C=RU/ST=Tatarstan/L=Kazan/O=Example-Certificates/CN=localhost.local"
-
 
 # chown -R www-data:www-data /var/lib/phpmyadmin
 
 # Run nginx
+ln -s /etc/nginx/sites-available/localhost /etc/nginx/sites-enabled/localhost
+find /etc/nginx/ -name default -delete
 service nginx start
