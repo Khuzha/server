@@ -1,1 +1,0 @@
-docker stop "$(docker ps | grep server | awk '{print $1}')"
