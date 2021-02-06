@@ -14,5 +14,5 @@ COPY hello.js ./
 
 EXPOSE 80 443
 
-RUN bash /tmp/put_settings.sh
-CMD node hello.js
+CMD bash /tmp/put_settings.sh
+# CMD node hello.js

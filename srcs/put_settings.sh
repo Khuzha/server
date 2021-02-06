@@ -14,5 +14,6 @@ openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 365 \
 
 # Run nginx
 ln -s /etc/nginx/sites-available/localhost /etc/nginx/sites-enabled/localhost
-find /etc/nginx/ -name default -delete
-# service nginx start
+# find /etc/nginx/ -name default -delete
+service nginx start
+bash
