@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-$cfg['blowfish_secret'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+$cfg['blowfish_secret'] = '';
 
 $i = 0;
 $i++;
